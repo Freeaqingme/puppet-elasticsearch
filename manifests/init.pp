@@ -299,7 +299,8 @@ class elasticsearch (
   $log_dir               = params_lookup( 'log_dir' ),
   $log_file              = params_lookup( 'log_file' ),
   $port                  = params_lookup( 'port' ),
-  $protocol              = params_lookup( 'protocol' )
+  $protocol              = params_lookup( 'protocol' ),
+  $cluster_name          = params_lookup( 'cluster_name' ),
   ) inherits elasticsearch::params {
 
   $bool_install_prerequisites=any2bool($install_prerequisites)

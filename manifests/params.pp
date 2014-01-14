@@ -15,6 +15,8 @@
 class elasticsearch::params {
 
   ### Application related parameters
+  
+  $cluster_name          = 'elasticsearch'
 
   $install_prerequisites = true
   $create_user           = true
