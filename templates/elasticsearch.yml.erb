@@ -324,8 +324,10 @@ node.name: "<%= scope.lookupvar('::fqdn') %>"
 #    to perform discovery when new nodes (master or data) are started:
 #
 discovery.zen.ping.unicast.hosts:
-- elasticsearch0.transip.us
-- elasticsearch1.transip.us
+<% scope.lookupvar('::elasticsearch::unicast_hosts').each |hostname| %>
+- <%= hostname %>
+<% end %>
+
 
 # EC2 discovery allows to use AWS EC2 API in order to perform discovery.
 #

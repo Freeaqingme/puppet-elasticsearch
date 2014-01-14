@@ -301,6 +301,7 @@ class elasticsearch (
   $port                  = params_lookup( 'port' ),
   $protocol              = params_lookup( 'protocol' ),
   $cluster_name          = params_lookup( 'cluster_name' ),
+  $unicast_hosts         = params_lookup( 'unicast_hosts' ),
   ) inherits elasticsearch::params {
 
   $bool_install_prerequisites=any2bool($install_prerequisites)
