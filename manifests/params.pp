@@ -25,7 +25,7 @@ class elasticsearch::params {
 
   $install_source        = ''
   $install_destination   = '/opt'
-  $init_config_template  = 'elasticsearch/elasticsearch.conf.erb'
+  $init_config_template  = 'elasticsearch/elasticsearch.conf.erb'   # Currently not used!
   $init_script_template  = 'elasticsearch/elasticsearch.init.erb'
 
   $package = $::operatingsystem ? {
@@ -105,7 +105,7 @@ class elasticsearch::params {
   $source = ''
   $source_dir = ''
   $source_dir_purge = false
-  $template = ''
+  $template = 'elasticsearch/elasticsearch.yml.erb'
   $options = ''
   $service_autorestart = true
   $version = '0.90.10'

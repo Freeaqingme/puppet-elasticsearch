@@ -40,17 +40,5 @@ class elasticsearch::config {
       noop    => $elasticsearch::noops,
     }
   }
-  
-  file { '/etc/elasticsearch/elasticsearch.yml':
-    ensure   => file,
-    content => template('elasticsearch/elasticsearch.yml.erb'),
-    mode    => $elasticsearch::config_file_mode,
-    owner   => $elasticsearch::config_file_owner,
-    group   => $elasticsearch::config_file_group,
-    source  => $elasticsearch::manage_file_source,
-    replace => $elasticsearch::manage_file_replace,
-    audit   => $elasticsearch::manage_audit,
-    noop    => $elasticsearch::noops,
-  }
 
 }
