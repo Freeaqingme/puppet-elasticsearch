@@ -324,8 +324,8 @@ node.name: "<%= scope.lookupvar('::fqdn') %>"
 #    to perform discovery when new nodes (master or data) are started:
 #
 discovery.zen.ping.unicast.hosts:
-<% scope.lookupvar('::elasticsearch::unicast_hosts').each |hostname| %>
-- <%= hostname %>
+<% scope.lookupvar('::elasticsearch::unicast_hosts').each do |hostname| %>
+- <%= hostname -%>
 <% end %>
 
 
