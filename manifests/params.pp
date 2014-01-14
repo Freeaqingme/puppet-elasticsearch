@@ -106,7 +106,7 @@ class elasticsearch::params {
   $template = ''
   $options = ''
   $service_autorestart = true
-  $version = '0.90.2'
+  $version = '0.90.10'
   $absent = false
   $disable = false
   $disableboot = false
